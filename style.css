@@ -129,7 +129,7 @@ body {
   background-image: url("gambar-kopi1111.jpg");
   /* Backgroud Slide================================================ */
 }
- 
+
 /* GRADASI HITAM BAWAH GAMBAR===================================== */
 .hero::after {
   content: "";
@@ -219,7 +219,7 @@ body {
   width: 100%;
   margin-top: 2rem;
   border-radius: 5%;
-  margin: 1.5rem;
+  margin: 0.3rem;
   flex-direction: column;
 }
 .about .row .content {
@@ -386,18 +386,24 @@ footer .credit a {
 /* Ukuran Layar Laptop ========================================== */
 @media (max-width: 1500px) {
   html {
-    font-size: 70%;
+    font-size: 90%;
   }
 }
 @media (max-width: 1200px) {
   html {
-    font-size: 50%;
+    font-size: 80%;
+  }
+  .about .row .about-img img {
+    margin: 33px 0px;
+    width: 65px;
   }
 }
 /* UKURAN PADA LAYAR TABLET ===================================== */
 @media (max-width: 960px) {
   html {
-    font-size: 30%;
+    font-size: 70%;
+  }
+  .hero {
   }
   #menu-dekstop {
     display: inline-block;
@@ -442,17 +448,16 @@ footer .credit a {
   .contact-us .row form {
     padding-top: 0;
   }
+  .about h3 {
+    padding-bottom: 10px;
+  }
+  .about .row .content p {
+    margin: 0px -100px;
+    padding: -10px 0px;
+  }
+  .about .row .about-img img {
+    margin: 38px 30px;
+  }
 }
 /* ============================================================================= */
-@keyframes slideShow {
-  0% {
-    background-image: url("img/gambar-kopi1111.jpg");
-  }
-  50% {
-    background-image: url("img/gambar-kopi111.jpg");
-  }
-  100% {
-    background-image: url("img/gambar-kopi1111.jpg");
-  }
-}
 /* Ukuran Layar Handphone======================================== */
