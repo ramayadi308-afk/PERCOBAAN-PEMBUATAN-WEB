@@ -126,24 +126,10 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  background-image: url("gambar-kopi1111.jpg");
   /* Backgroud Slide================================================ */
-  animation: slideShow 20s infinite ease-in-out;
 }
-/* Backgroud Slide ============================================== */
-@keyframes slideShow {
-  0% {
-    background-position: 0% 50%;
-    background-image: url("img/gambar-kopi1111.jpg");
-  }
-  50% {
-    background-position: 100% 50%;
-    background-image: url("img/gambar-kopi111.jpg");
-  }
-  100% {
-    background-position: 0% 50%;
-    background-image: url("img/gambar-kopi1111.jpg");
-  }
-}
+ 
 /* GRADASI HITAM BAWAH GAMBAR===================================== */
 .hero::after {
   content: "";
