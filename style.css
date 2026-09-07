@@ -1,0 +1,472 @@
+/* Pintasan Warna ============================================== */
+:root {
+  --warnakopi: #b6895b;
+  --hitam: #010101;
+  --putih: #fff;
+}
+/* Isi Dari Semua Halaman ====================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--hitam);
+  color: var(--putih);
+}
+/* JUDUL HALAMAN =============================================== */
+.judul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid var(--warnakopi);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.judul-awal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* Membuat Logo Berputar ======================================== */
+.judul .judul-awal img {
+  margin-top: -5px;
+  animation: spin 10s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(10deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* JUDUL AWAL ================================================== */
+.judul .judul-awal h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+  text-align: left;
+  padding-left: 0.5px;
+}
+.judul .judul-awal span,
+.gallery span,
+.contact-us span {
+  color: var(--warnakopi);
+}
+/* JUDUL TENGAH ================================================ */
+.judul .judul-tengah a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+.judul .judul-tengah a:hover {
+  color: var(--warnakopi);
+}
+.judul .judul-tengah a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  display-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--warnakopi);
+  transform: scaleX(0);
+}
+.judul .judul-tengah a:hover::after {
+  transform: scaleX(0.5);
+  transition: 0.2s linear;
+}
+/* JUDUL AKHIR ================================================= */
+.judul .judul-akhir {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.judul .judul-akhir a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+.judul .judul-akhir a:hover {
+  color: var(--warnakopi);
+}
+#menu-dekstop {
+  display: none;
+}
+/* Pilihan Bahasa ============================================== */
+.judul .language-switcher {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+.judul .language-switcher select {
+  padding: 5px 3px;
+  margin-left: auto;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+/* Isi Dari Home================================================= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  /* Backgroud Slide================================================ */
+  animation: slideShow 20s infinite ease-in-out;
+}
+/* Backgroud Slide ============================================== */
+@keyframes slideShow {
+  0% {
+    background-position: 0% 50%;
+    background-image: url("img/gambar-kopi1111.jpg");
+  }
+  50% {
+    background-position: 100% 50%;
+    background-image: url("img/gambar-kopi111.jpg");
+  }
+  100% {
+    background-position: 0% 50%;
+    background-image: url("img/gambar-kopi1111.jpg");
+  }
+}
+/* GRADASI HITAM BAWAH GAMBAR===================================== */
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 20%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+.hero .content {
+  padding: 1.4rem 7%;
+  text-align: left;
+  max-width: 60rem;
+}
+.hero .content h1 {
+  font-size: 3em;
+  text-align: left;
+  color: #ffffff;
+  ix-blend-mode: difference;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3 0.5);
+  line-height: 1.2;
+}
+.hero .content h1 span {
+  color: #855320;
+}
+.hero .content p {
+  font-size: 1rem;
+  text-align: left;
+  margin-top: 0.2rem;
+  line-height: 1.2;
+  font-weight: 500;
+  font-style: italic;
+  color: #fff;
+  ix-blend-mode: difference;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3 0.5);
+  line-height: 1.2;
+}
+.hero .content .cta {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  color: var(--putih);
+  font-weight: 700;
+  background-color: #a26a32;
+  border-radius: 0.5rem;
+  ix-blend-mode: difference;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+/* ISI DARI ABOUT =============================================== */
+.about,
+.Coffee-Varieties .gallery {
+  padding: 8rem 7% 1.4rem;
+  color: #fff;
+}
+.about .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.about h2,
+.Coffee-Varieties h2,
+.gallery h2,
+.contact-us h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+.about h2 span,
+.Coffee-Varieties h2 span {
+  color: #fff;
+  color: var(--warnakopi);
+}
+.about .row {
+  display: flex;
+  align-items: flex-start;
+}
+.about .row .about-img {
+  flex: 1 1 5rem;
+}
+.about .row .about-img img {
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 5%;
+  margin: 1.5rem;
+  flex-direction: column;
+}
+.about .row .content {
+  flex: 1 1 80rem;
+  padding: 0 9rem;
+}
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  text-align: justify !important;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+  line-height: 1.6;
+}
+.garis-pembatas {
+  border: none;
+  height: 3px;
+  background-color: #855320;
+  width: 100%;
+  margin: 40px auto;
+}
+/* Coffee varieties ============================================ */
+.Coffee-Varieties {
+  padding: 8rem 7%;
+}
+.Coffee-Varieties h2,
+.gallery h2,
+.contact-us h2 {
+  margin-bottom: 0.1em;
+}
+.Coffee-Varieties p,
+.gallery p,
+.contact-us p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.2rem;
+}
+.Coffee-Varieties .rows {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  justify-content: center;
+  gap: 2rem;
+}
+.Coffee-Varieties .rows .menu-card {
+  flex: 0 1 220px;
+  text-align: center;
+}
+.Coffee-Varieties .rows .menu-card img {
+  width: 80%;
+  border-radius: 50%;
+}
+.Coffee-Varieties .rows .menu-card .menu-card-title {
+  margin: 1rem auto 0.5rem;
+}
+/* Gallery ====================================================== */
+#gallery {
+  scroll-margin-top: 140px;
+}
+
+.gallery .gallery-menu {
+  display: flex;
+}
+.gallery .gallery-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.gallery .gallery-img img {
+  border-radius: 5%;
+  margin: 2rem;
+  margin-top: 8rem;
+}
+.gallery .gallery-img p {
+  font-weight: 300;
+  border-bottom: 1px solid var(--warnakopi);
+}
+/* contact us =================================================== */
+.contact-us {
+  color: var(--putih);
+  text-align: center;
+}
+.contact-us {
+  padding: 8rem 7%;
+}
+.contact-us .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+}
+.contact-us .row .maps {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+.contact-us .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.contact-us .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--hitam);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+.contact-us .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+}
+.contact-us .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--warnakopi);
+  cursor: pointer;
+}
+footer {
+  background-color: var(--warnakopi);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+footer .sosial {
+  padding: 1rem 0.3rem;
+}
+footer .sosial a {
+  color: #fff;
+  margin: 1rem;
+}
+footer .sosial a:hover,
+footer .links a:hover {
+  color: var(--hitam);
+}
+footer .links {
+  margin-bottom: 1rem;
+}
+footer .links a {
+  color: #fff;
+  padding: 1rem 1rem;
+}
+footer .credit {
+  font-size: 0.8rem;
+}
+footer .credit a {
+  font-weight: 700;
+}
+
+/* Ukuran Layar Laptop ========================================== */
+@media (max-width: 1500px) {
+  html {
+    font-size: 70%;
+  }
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+}
+/* UKURAN PADA LAYAR TABLET ===================================== */
+@media (max-width: 960px) {
+  html {
+    font-size: 30%;
+  }
+  #menu-dekstop {
+    display: inline-block;
+  }
+  .judul .judul-tengah {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .judul .judul-tengah.active {
+    right: 0;
+  }
+  .judul .judul-tengah a {
+    color: var(--hitam);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5;
+    font-size: 2rem;
+  }
+  .judul .judul-tengah a::after {
+    transform-origin: 0 0;
+  }
+  .judul .judul-tengah a:hover::after {
+    transform: scaleX(0.2);
+  }
+  .judul .language-switcher select {
+    padding: 0.5px 0.5px;
+    margin-left: auto;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  .contact-us .row {
+    flex-wrap: wrap;
+  }
+  .contact-us .row .maps {
+    height: 30rem;
+  }
+  .contact-us .row form {
+    padding-top: 0;
+  }
+}
+/* ============================================================================= */
+@keyframes slideShow {
+  0% {
+    background-image: url("img/gambar-kopi1111.jpg");
+  }
+  50% {
+    background-image: url("img/gambar-kopi111.jpg");
+  }
+  100% {
+    background-image: url("img/gambar-kopi1111.jpg");
+  }
+}
+/* Ukuran Layar Handphone======================================== */
